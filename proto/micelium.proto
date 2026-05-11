@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package micelium;
+
+option java_multiple_files = true;
+option java_package = "net.micelium.proto";
+option java_outer_classname = "MiceliumProto";
+
+message ChunkData {
+	string world_id = 1;
+	int32 chunk_x = 2;
+	int32 chunk_z = 3;
+	bytes compressed_nbt = 4;
+	string owner_node_id = 5;
+	int64 revision = 6;
+}
+
+message ChunkRequest {
+	string request_id = 1;
+	string requester_node_id = 2;
+	string world_id = 3;
+	int32 chunk_x = 4;
+	int32 chunk_z = 5;
+	bool allow_cold_storage_fallback = 6;
+}
+
+message ChunkTransfer {
+	string transfer_id = 1;
+	string from_node_id = 2;
+	string to_node_id = 3;
+	ChunkData chunk_data = 4;
+	int64 requested_at_unix_ms = 5;
+	int64 acknowledged_at_unix_ms = 6;
+}
+
+message OwnershipUpdate {
+	string world_id = 1;
+	int64 revision = 2;
+	repeated OwnershipEntry entries = 3;
+
+	message OwnershipEntry {
+		string chunk_key = 1;
+		string owner_node_id = 2;
+	}
+}
+
+message HeartbeatPing {
+	string node_id = 1;
+	int64 sent_at_unix_ms = 2;
+	int64 nonce = 3;
+}
+
+message HeartbeatPong {
+	string node_id = 1;
+	int64 received_at_unix_ms = 2;
+	int64 nonce = 3;
+	bool healthy = 4;
+}
