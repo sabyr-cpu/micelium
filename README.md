@@ -7,10 +7,12 @@ Each player runs a server + client, eliminating the need for a central game serv
 
 **Status:** Core protocol design in progress. Do not expect stability or documentation.
 
+The central coordinator lives in a separate repo: **[hyphae](https://github.com/sabyr-cpu/hyphae)**.
+
 ## Roadmap
 
 **v0.1 — First working prototype**
-- [ ] Central coordinator (peer discovery, ownership registry, cold storage)
+- [x] Central coordinator → [hyphae](https://github.com/sabyr-cpu/hyphae) (peer discovery, ownership registry, cold storage)
 - [ ] Chunk ownership assignment and tracking
 - [ ] Basic peer-to-peer chunk transfer
 - [ ] Two players can connect and see each other's chunks
