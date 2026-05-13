@@ -1,0 +1,18 @@
+{
+  "micelium.menu.worlds": "Micelium Worlds",
+
+  "micelium.screen.worlds.title": "Micelium Worlds",
+  "micelium.screen.worlds.connect": "Connect",
+  "micelium.screen.worlds.add": "Add World",
+  "micelium.screen.worlds.create": "Create World",
+  "micelium.screen.worlds.edit": "Edit",
+  "micelium.screen.worlds.delete": "Delete",
+  "micelium.screen.worlds.refresh": "Refresh",
+
+  "micelium.screen.add_world.title": "Add Micelium World",
+  "micelium.screen.edit_world.title": "Edit Micelium World",
+  "micelium.screen.add_world.name": "World Name",
+  "micelium.screen.add_world.name.hint": "My World",
+  "micelium.screen.add_world.address": "Coordinator Address",
+  "micelium.screen.add_world.port": "Port"
+}
