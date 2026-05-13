@@ -10,10 +10,12 @@
 	"accessWidener": "micelium.accesswidener",
 	"environment": "*",
 	"entrypoints": {
-		"main": ["net.micelium.MiceliumMod"]
+		"main": ["net.micelium.MiceliumMod"],
+		"client": ["sabyrzhan.micelium.client.MiceliumClientMod"]
 	},
 	"mixins": [
-		"micelium.mixins.json"
+		"micelium.mixins.json",
+		"micelium.client.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.18.4",

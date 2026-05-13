@@ -14,9 +14,12 @@ repositories {
 loom {
 	accessWidenerPath = file("src/main/resources/micelium.accesswidener")
 
+	splitEnvironmentSourceSets()
+
 	mods {
 		"micelium" {
 			sourceSet sourceSets.main
+			sourceSet sourceSets.client
 		}
 	}
 }
